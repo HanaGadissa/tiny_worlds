@@ -1,0 +1,21 @@
+:root { --bg:#fbf6ff; --card:#fff; --ink:#4a3f63; --pink:#f4a6c4; --lav:#b9a3e8; }
+* { box-sizing: border-box; } body { margin:0; font-family: 'Nunito', system-ui, sans-serif; background:var(--bg); color:var(--ink); }
+button { background:var(--lav); color:#fff; border:0; border-radius:12px; padding:8px 14px; cursor:pointer; font:inherit; } button:disabled { opacity:.4; cursor:default; }
+button.ghost { background:transparent; color:var(--ink); border:1px solid #ddd; }
+input, select { font:inherit; padding:8px 10px; border:1px solid #e4d9f5; border-radius:10px; width:100%; margin:4px 0; background:#fff; color:var(--ink); }
+header { display:flex; gap:10px; align-items:center; padding:10px 18px; background:var(--card); box-shadow:0 2px 10px #b9a3e822; flex-wrap:wrap; }
+header h1 { font-size:20px; margin:0; } header input { width:200px; margin:0; } .spacer { flex:1; } .msg { color:#6aa36a; }
+.layout { display:grid; grid-template-columns:200px 1fr 240px; gap:16px; padding:16px; align-items:start; }
+@media (max-width:1250px){ .layout { grid-template-columns:1fr; } main { overflow-x:auto; } }
+aside, .card { background:var(--card); border-radius:18px; padding:14px; box-shadow:0 4px 18px #b9a3e822; }
+h3 { margin:6px 0; } h4 { margin:10px 0 4px; text-transform:capitalize; font-size:13px; opacity:.7; }
+.grid { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; }
+.item { background:#f5effd; color:var(--ink); display:flex; flex-direction:column; align-items:center; padding:6px 0; } .item span { font-size:26px; } .item:hover { background:var(--pink); }
+.stage { border-radius:18px; overflow:hidden; box-shadow:0 6px 24px #b9a3e855; display:block; }
+.toolbar { display:flex; gap:8px; align-items:center; margin-top:10px; flex-wrap:wrap; }
+.swatches { display:flex; gap:6px; flex-wrap:wrap; } .swatches i { width:28px; height:28px; border-radius:50%; cursor:pointer; border:2px solid #fff; box-shadow:0 0 0 1px #ddd; } .swatches i.on { box-shadow:0 0 0 3px var(--lav); }
+.challenge { background:#fff7fb; border-radius:12px; padding:8px 12px; font-size:14px; } .challenge ul { padding-left:0; list-style:none; margin:0; }
+.bad { color:#d9534f; } .ok { color:#4a8f4a; }
+.rooms { list-style:none; padding:0; margin:0; } .rooms li { padding:8px 10px; border-radius:10px; cursor:pointer; } .rooms li:hover, .rooms li.on { background:#f1e8ff; }
+.auth { min-height:100vh; display:grid; place-items:center; background:linear-gradient(135deg,#fde0e8,#e6dcfa); }
+.card { width:320px; display:flex; flex-direction:column; gap:8px; text-align:center; } .card h1 { margin:0; } .card p { margin:0 0 8px; } .card a { cursor:pointer; font-size:14px; color:var(--lav); }
